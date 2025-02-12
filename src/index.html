@@ -48,7 +48,7 @@
       form.addEventListener('submit', async (evt) => {
         evt.preventDefault();
 
-        const text = evt.target.textContent;
+        const text = button.textContent.trim();
         await navigator.clipboard.writeText(text);
 
         controller?.abort();
