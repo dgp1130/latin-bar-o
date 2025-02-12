@@ -37,6 +37,8 @@
     </style>
 
     <script type="module">
+      navigator.serviceWorker.register('/service-worker.js', {type: 'module'});
+
       const button = document.getElementById('the-button');
       const dialog = document.getElementById('copied');
 
