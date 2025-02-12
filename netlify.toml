@@ -1,0 +1,9 @@
+# Netlify deployment configuration.
+# See: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+publish = "src/"
+
+# Nothing meaningful to process, not worth the effort.
+[build.processing]
+skip_processing = true

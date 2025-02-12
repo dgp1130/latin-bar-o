@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "A site dedicated to copying the latin bar O character `ɵ` used in Angular to denote private APIs.",
   "scripts": {
-    "start": "http-server src/"
+    "start": "http-server src/",
+    "deploy": "netlify deploy --prod"
   },
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "netlify-cli": "^18.0.4"
   }
 }
