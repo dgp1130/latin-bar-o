@@ -1,0 +1,12 @@
+{
+  "name": "latin-bar-o",
+  "version": "0.0.0",
+  "description": "A site dedicated to copying the latin bar O character `ɵ` used in Angular to denote private APIs.",
+  "scripts": {
+    "start": "http-server src/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
