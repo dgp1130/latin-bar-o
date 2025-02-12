@@ -1,7 +1,12 @@
 self.addEventListener('install', (evt) => {
   evt.waitUntil((async () => {
     const cache = await caches.open('v1');
-    await cache.addAll(['/']);
+    await cache.addAll([
+      '/',
+      '/icon-512.png',
+      '/icon-192.png',
+      '/favicon.ico',
+    ]);
   })());
 });
 
