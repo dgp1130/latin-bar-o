@@ -6,7 +6,7 @@
     <link rel="manifest" href="manifest.json">
 
     <style>
-      html, body {
+      html, body, form {
         width: 100%;
         height: 100%;
         margin: 0;
@@ -41,10 +41,13 @@
       navigator.serviceWorker.register('/service-worker.js', {type: 'module'});
 
       const button = document.getElementById('the-button');
+      const form = document.getElementById('the-form');
       const dialog = document.getElementById('copied');
 
       let controller;
-      button.addEventListener('click', async (evt) => {
+      form.addEventListener('submit', async (evt) => {
+        evt.preventDefault();
+
         const text = evt.target.textContent;
         await navigator.clipboard.writeText(text);
 
@@ -62,7 +65,9 @@
     </script>
   </head>
   <body>
-    <button id="the-button">ɵ</button>
+    <form id="the-form" action="#">
+      <button id="the-button" type="submit" autofocus>ɵ</button>
+    </form>
 
     <dialog id="copied">Copied!</dialog>
   </body>
