@@ -3,6 +3,7 @@
   <head>
     <title>Latin Bar O</title>
     <meta charset="utf8">
+
     <style>
       html, body {
         width: 100%;
@@ -21,6 +22,14 @@
         font-size: 60vh;
       }
     </style>
+
+    <script type="module">
+      const button = document.getElementById('the-button');
+      button.addEventListener('click', async (evt) => {
+        const text = evt.target.textContent;
+        await navigator.clipboard.writeText(text);
+      });
+    </script>
   </head>
   <body>
     <button id="the-button">ɵ</button>
